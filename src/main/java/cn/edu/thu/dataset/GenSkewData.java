@@ -20,20 +20,28 @@ public class GenSkewData {
         if(args.length<1) {
             System.out.println("genDataFolder");
         }
-        String folder = args[0];
-        int deviceNumber = 500;
+        String folder = "src/main/resources";
+        int deviceNumber = 5;
         // one year
         long dataSize = 365 * 24 * 60;
 
-        gen7Years(folder + "/2010-2017.tsfile", deviceNumber, dataSize);
+        System.out.println(transferDataToLong("01/01/2010 00:00:00"));
+        System.out.println(transferDataToLong("01/03/2011 00:00:00"));
+        System.out.println(transferDataToLong("01/05/2012 00:00:00"));
+        System.out.println(transferDataToLong("01/07/2013 00:00:00"));
+        System.out.println(transferDataToLong("01/09/2014 00:00:00"));
+        System.out.println(transferDataToLong("01/11/2015 00:00:00"));
+        System.out.println(transferDataToLong("01/13/2016 00:00:00"));
 
-        gen1Year(folder + "/2010.tsfile", "01/01/2010 00:00:00", deviceNumber, dataSize, -180f, 180f, -90f, 90f);
-        gen1Year(folder + "/2011.tsfile", "01/03/2011 00:00:00", deviceNumber, dataSize, 0f, 180f, -90f, 90f);
-        gen1Year(folder + "/2012.tsfile", "01/05/2012 00:00:00", deviceNumber, dataSize, 0f, 180f, 0f, 90f);
-        gen1Year(folder + "/2013.tsfile", "01/07/2013 00:00:00", deviceNumber, dataSize, 0f, 90f, 0f, 90f);
-        gen1Year(folder + "/2014.tsfile", "01/09/2014 00:00:00", deviceNumber, dataSize, 0f, 40f, 0f, 20f);
-        gen1Year(folder + "/2015.tsfile", "01/11/2015 00:00:00", deviceNumber, dataSize, 0f, 20f, 0f, 10f);
-        gen1Year(folder + "/2016.tsfile", "01/13/2016 00:00:00", deviceNumber, dataSize, 0f, 10f, 0f, 5f);
+        gen7Years(folder + "/2010-2017.tsfile", deviceNumber, dataSize);
+//
+//        gen1Year(folder + "/2010.tsfile", "01/01/2010 00:00:00", deviceNumber, dataSize, -180f, 180f, -90f, 90f);
+//        gen1Year(folder + "/2011.tsfile", "01/03/2011 00:00:00", deviceNumber, dataSize, 0f, 180f, -90f, 90f);
+//        gen1Year(folder + "/2012.tsfile", "01/05/2012 00:00:00", deviceNumber, dataSize, 0f, 180f, 0f, 90f);
+//        gen1Year(folder + "/2013.tsfile", "01/07/2013 00:00:00", deviceNumber, dataSize, 0f, 90f, 0f, 90f);
+//        gen1Year(folder + "/2014.tsfile", "01/09/2014 00:00:00", deviceNumber, dataSize, 0f, 40f, 0f, 20f);
+//        gen1Year(folder + "/2015.tsfile", "01/11/2015 00:00:00", deviceNumber, dataSize, 0f, 20f, 0f, 10f);
+//        gen1Year(folder + "/2016.tsfile", "01/13/2016 00:00:00", deviceNumber, dataSize, 0f, 10f, 0f, 5f);
 
     }
 
