@@ -20,7 +20,7 @@ public class DesDataFile {
         BufferedReader reader = null;
         try {
             reader = new BufferedReader(new FileReader(readPath));
-            String line = null;
+            String line;
             while ((line = reader.readLine()) != null) {
                String[] items = line.split(",");
                long time = Long.parseLong(items[1]);
